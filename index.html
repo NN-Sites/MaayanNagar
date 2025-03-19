@@ -41,7 +41,7 @@
                     background: #30bb4e;
                     border-radius: 5px;
                     transform: scale(1.1);
-                }    V
+                }    
                 nav .instagram-icon {
                     font-size: 24px;
                     color: rgb(0, 0, 0);
@@ -60,8 +60,10 @@
                     font-size: 50px;
                     font-weight: bold;
                     color: rgb(0, 0, 0);
-                    text-align: center;
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    text-align: left; /* שינוי הטקסט לימין */
+                    
+
                 }
 
                 @keyframes moveGradient {
@@ -77,18 +79,21 @@
                     font-size: 30px;
                     color: #000000;
                     margin-top: 5px;
+                    
                 }
                 
                 section {
                     padding: 80px 20px;
-                    margin-top: 50px;
+                    margin-top: 90px;
                 }
                 h1 {
                     color: #000000;     
+                    text-align: center;
                 }
                 p {
                     color: #555;
                     line-height: 1.6;
+                    text-align: center;
                 }
                 .btn {
                     display: inline-block;
@@ -215,18 +220,57 @@
                 }
 
                 #about {
-                    display: flex;
+                    display: auto;
                     align-items: center;
                     justify-content: space-between;
                     text-align: center;
                     padding: 10%;
                     max-height: 100px
                 }
-
-                #about img {
-                    max-width: 35%;
-                    border-radius: 400px;
+                
+                .first {
+                    font-size: 50px;
+                    color: #000000;
+                    margin-top: 5px;
+                    margin-left: -70px;
                 }
+                .slogan {
+                    font-size: 30px;
+                    color: #000000;
+                    margin-top: 5px;
+                    margin-left: -70px;
+                }
+                /* עיצוב לטלפונים */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  .first-section {
+    display: flex;
+    align-items: center; /* מצמיד את הטקסטים לגובה התמונה */
+  }
+
+  .image {
+    max-width: 50%; /* מגביל את גודל התמונה */
+    margin-right: 0px; /* רווח בין התמונה לטקסטים */
+  }
+
+  .text-container {
+    text-align: left; /* מצמיד את הטקסט לצד התמונה */
+
+    .first {
+      font-size: 50px;
+      text-align: center;
+    text-align: center; /* שינוי הטקסט לימין */
+    }
+  }
+}
+
+
+
             </style>
         </head>
         <body>
@@ -240,19 +284,30 @@
                 </a>
             </nav>
 
-            <div id="home" class="header-banner">
-                מעין נגר
-                <div class="sub-header">יועצת חינוכית</div>
-                <div class="sub-header">LICBT מטפלת</div>
+            <div id="home" class="header-banner" style="position: relative; padding-right: 80px;">
+                <img src="https://i.postimg.cc/YSdZ2h6s/Whats-App-2025-03-10-23-19-22-dcedc44c-removebg-preview.png" 
+                     alt="תמונה של מעין נגר" 
+                     style="position: absolute; top: -35px; right: -40px; max-width: 300px;">
+                <div style="margin-left: 50px;">
+                    <div class="first text">מעין נגר</div>
+                    <div class="slogan">יועצת חינוכית</div>
+                    <div class="slogan">LICBT מטפלת</div>
+                </div>
             </div>
-        
+            
+            
             
             <section id="about">
                 <div>
                     <h1>אודות</h1>
-                    <p>מעיין נגר מציעה שירותים איכותיים ומקצועיים במחירים תחרותיים. אנו שואפים למצוינות ומעניקים יחס אישי לכל לקוח.</p>
-                            </div>
-                <img src="https://i.postimg.cc/2672CT8k/Untitled-design-5-removebg-preview-1.png" alt="תמונה">
+                    <div dir="rtl" style="font-family: Arial, sans-serif; text-align: right; line-height: 1.6;">
+                        <p>אני מעין, יועצת חינוכית וסטאז’רית בלימודי LICBT (טיפול קוגניטיבי-התנהגותי מונחה).</p>
+                        <p>בעלת 23 שנות ניסיון במערכת הצבאית בליווי והעצמת אנשים.</p>
+                        <p>מציעה טיפול רגשי ממוקד ומבוסס מחקר, המסייע בהתמודדות עם חרדה, לחץ ודימוי עצמי נמוך.</p>
+                        <p>המפגשים מותאמים אישית באווירה תומכת ומכבדת.</p>
+                        <p>מאמינה שכל אדם יכול לרכוש כלים להתמודדות עם אתגרי החיים – ואני כאן ללוות אותך בדרך לשינוי.</p>
+                    </div>
+                                        
             </section>
 
             <section id="faq">
